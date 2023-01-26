@@ -1,0 +1,26 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "cypress/**/*.ts",
+    "package.json"
+  ],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "importsNotUsedAsValues": "preserve",
+    "target": "es2020",
+    "lib": ["es2019", "dom", "es5", "es6", "dom.iterable"],
+    "composite": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "types": ["vite/client", "vitest/globals", "@types/node", "vue-i18n"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
