@@ -39,22 +39,8 @@ export default ({ mode }: { mode: string }) => {
     base: '/',
     server: {
       port: 3984,
-      host: true,
-      proxy: {
-        '/auth': {
-          target: `${process.env.VITE_APP_BASE_IP}:2992`,
-          autoRewrite: true
-        },
-        '/fhir-db': {
-          target: process.env.VITE_APP_BASE_IP
-        },
-        '/json-storage': {
-          target: process.env.VITE_APP_BASE_IP
-        },
-        '/fhir-data-aggregator': {
-          target: process.env.VITE_APP_BASE_IP
-        }
-      }    },
+      host: true
+    },
     test: {
       globals: true
     }
