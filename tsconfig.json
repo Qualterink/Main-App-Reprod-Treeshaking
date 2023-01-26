@@ -2,6 +2,7 @@
   "compilerOptions": {
     "composite": false,
     "resolveJsonModule": true,
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
